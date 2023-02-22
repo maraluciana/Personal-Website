@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Contact</h1>
+<h2>Get in Touch</h2>
+
+<img src="{{url_for('static', filename='images/location.png')}}" height="50">
+<span>
+    Bucharest, Romania
+</span> 
+<br>
+
+<img src="{{url_for('static', filename='images/email.png')}}" height="50">
+<span>
+    maraluciana1606@gmail.com
+</span>
+<br>
+
+<img src="{{url_for('static', filename='images/phone.png')}}" height="50">
+<span>
+    0722618765
+</span>
+<br>
+
+
+<h2>Contact form</h2>
+<form>
+    <label for="name">Your name:</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="email">Last name:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject"><br>
+
+    <label for="message">Message:</label><br>
+    <input type="text" id="message" name="message" style="height:100px;"><br>
+
+    <input type="submit" value="Submit">
+</form> 
+
+{% endblock content %}
