@@ -15,7 +15,7 @@ def resume():
    return render_template("resume.html")
 
 @app.route('/portfolio')
-def portofolio():
+def portfolio():
    return render_template("portfolio.html")
 
 @app.route('/contact')
