@@ -12,7 +12,7 @@ def about():
 
 @app.route('/resume')
 def resume():
-   return "Resume"
+   return render_template("resume.html")
 
 @app.route('/portofolio')
 def portofolio():
