@@ -1,5 +1,34 @@
-
-<img src="{{url_for('static', filename='images/poze_fake.png')}}">
-<h1>Mara Belu</h1>
-<p>Student - Faculty of Mathematics and Computer Science<p>
-<a href="/">Homepage</a> | <a href="about">About me</a> | <a href="resume">Resume</a> | <a href="portfolio">Portfolio</a> | <a href="contact">Contact</a>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid grid gap-3 ">
+        <div class="col-6 col-md-4">
+            <img src="{{url_for('static', filename='images/poze_fake.png')}}" class="img-thumbnail" width="100" height="100">
+            <a class="navbar-brand " href="#">Mara Belu</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Homepage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="about">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact">Contact</a>
+                </li>
+            </ul>
+            <form class="d-inline-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
