@@ -1,58 +1,39 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner imgbox">
+<div id="carouselExampleFade" class="carousel slide carousel-fade">
+  <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{url_for('static', filename='images/homepage_1.png')}}" class="d-block w-100 img-responsive center-fit" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5 class = "text-centered">First slide label</h5>
-        <p class = "text-centered">Some representative placeholder content for the first slide.</p>
+      <div class = "text_over_image">
+        <h1><strong>Mara Belu Luciana</strong></h1>
+        <h3>Last year student looking for new and interesting opportunities.</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{url_for('static', filename='images/homepage_2.png')}}" class="d-block w-100 img-responsive" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+      <img src="{{url_for('static', filename='images/homepage_2.png')}}" class="d-block w-100 img-responsive center-fit" alt="...">
+      <div class = "text_over_image">
+        <h1><strong>Email</strong></h1>
+        <h3>maraluciana1606@gmail.com</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="{{url_for('static', filename='images/Poza.jpg')}}" class="d-block w-100 img-responsive" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+      <img src="{{url_for('static', filename='images/homepage_3.png')}}" class="d-block w-100 img-responsive center-fit" alt="...">
+      <div class = "text_over_image">
+        <h1><strong>Github</strong></h1>
+        <a href="https://github.com/maraluciana" target="_blank" class="h3">maraluciana</a>
       </div>
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-
-<h1>Mara Belu Luciana</h1>
-<h3>Last year student looking for new and interesting opportunities.</h3>
-
-<ul style="list-style-type:none;">
-    <li>
-        <span>Email </span>
-        <span>maraluciana1606@gmail.com</span>
-    </li>
-    <li>
-        <span>Github </span>
-        <a href="https://github.com/maraluciana">maraluciana</a>
-    </li>
-</ul>
 
 {% endblock content %}
 
