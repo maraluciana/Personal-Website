@@ -6,7 +6,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 247, 241);
+  background-color: rgb(255, 250, 246);
   background-size: cover;
 }
 
@@ -50,4 +50,10 @@ a:hover {
 
 .text-font {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.title-portfolio{
+  height:20vh;
+  background-color: rgb(240, 236, 232);
+  margin-bottom: 50px;
 }
