@@ -21,14 +21,13 @@ body::before {
   margin: auto;
 }
 
-.text_over_image {
+.text-over-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 2px 2px 4px rgb(48, 46, 51);
   color: white;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 a:link {
@@ -40,7 +39,15 @@ a:hover {
   color: hotpink;
 }
 
-#full-size{
-  height:80vh;
+.full-size{
+  height:100vh;
   position:absolute;
+}
+
+.scale-down {
+  width: 70%;
+}
+
+.text-font {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

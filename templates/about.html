@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>About me</h1>
-<p> As a student with no formal work experience, I am highly motivated and eager to learn new skills and take on new
-    challenges. I am passionate about technology and am constantly seeking to expand my knowledge and abilities. I
-    am a quick learner with strong problem-solving skills and an ability to work well in teams.</p>
-
+<div class="container-fluid">
+    <div class="row d-flex align-items-center full-size ">
+        <div class="col px-5 text-font">
+            <div class = "display-3 fw-bolder">
+                <span class = "display-3 fw-bolder">About me </span>
+                <i class="bi bi-cup-hot-fill"></i>
+            </div>
+            <br>
+            <p class = " fs-4 lh-base text-muted"> As a student with no formal work experience, I am highly motivated and eager to learn new skills and take on new
+                challenges. I am passionate about technology and am constantly seeking to expand my knowledge and abilities. I
+                am a quick learner with strong problem-solving skills and an ability to work well in teams.
+            </p>
+        </div>
+        <div class="col d-none d-md-block text-center">
+            <img src="{{url_for('static', filename='images/aboutme_element.png')}}" class="img-responsive scale-down" alt="...">
+        </div>
+    </div>
+</div>
 
 
 
