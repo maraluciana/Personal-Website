@@ -1,68 +1,184 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h1>Portfolio</h1>
-<h2>Projects</h2>
-
-<h3>Bookgram - Web Project</h3>
-<h4>[ 11/2022 - 01/2023 ]</h4>
-<ul>
-    <li>Collaborated with five other colleagues to develop a social media platform designed to share and discover
-        books and reading-related content, simulating an Agile development process.</li>
-    <li>Developed backend components utilizing ASP.NET : created REST APIs and integrated with the frontend team to
-        deliver a seamless user experience.</li>
-    <li>Demonstrated strong communication, teamwork, and problem-solving skills throughout the project, helping to
-        ensure the success of the team and the quality of the final product.</li>
-</ul>
-
-<br>
-<span>Link :</span>
-<a href="https://github.com/inginerie-software-22-23/proiect-inginerie-software-teammango">https://github.com/inginerie-software-22-23/proiect-inginerie-software-teammango</a>
-<br>
-
-<h3>Enchanted Forest - Unity Project</h3>
-<h4>[ 04/2022 - 06/2022 ]</h4>
-<ul>
-    <li>Collaborated with two other colleagues to develop a 2D Platform Game made in Unity and Plastic SCM.</li>
-    <li>Designed gameplay moments, including narrative events, enemy encounters, and points of interest within the
-        game world.</li>
-    <li>Implemented player movement, sound management, interactions with environment and various enemy
-        behaviours using C# scripts.</li>
-</ul> 
-
-<br>
-<span>Link :</span>
-<a href="https://github.com/Apelia-Ion/Proiect-MDS">https://github.com/Apelia-Ion/Proiect-MDS</a>
-<br>
 
 
-<h3>Street Scene - OpenGL Project</h3>
-<h4>[ 12/2022 - 01/2023 ]</h4>
-<ul>
-    <li>Developed two small projects in OpenGL, showcasing a range of 2D and 3D graphics programming techniques by
-        depicting street scenes.</li>
-    <li>The first project features two animated cars in a simple 2D scene, demonstrating proficiency in basic animation
-        and movement controls.</li>
-    <li>The second project is a more complex 3D scene that includes fog and ambient lighting effects, as well as two cars
-        and several lamps.</li>
-</ul> 
+<div class="container-fluid">
+    <div class="row">
+        <div class="col py-4"> 
+            <!-- Bookgram Card -->
+            <div class="card" style="width: 25rem;">
+                <img src="{{url_for('static', filename='images/homepage_3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Bookgram</h5>
+                <p class="card-text">[ 11/2022 - 01/2023 ] - Web Project</p>
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#bookgramModal">More Info</button>
+                <a href="https://github.com/inginerie-software-22-23/proiect-inginerie-software-teammango" target="_blank" class="btn btn-outline-secondary">Link</a>
+                </div>
+            </div>
 
-<h3>Alien Language Detection - Machine Learning Project</h3>
-<h4>[ 04/2022 - 05/2022 ]</h4>
-<ul>
-    <li>Developed Natural Language Processing project which classifies alien sentences into different languages.</li>
-    <li>Trained a model using Multinomial Naive Bayes from Sklearn with 80% accuracy.</li>
-    <li>Used Bag-of-Words to preprocess data for future classification.</li>
-</ul> 
+            <div class="modal fade" id="bookgramModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Bookgram - Web Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Collaborated with five other colleagues to develop a social media platform designed to share and discover
+                                books and reading-related content, simulating an Agile development process.</li>
+                            <li class="list-group-item">Developed backend components utilizing ASP.NET : created REST APIs and integrated with the frontend team to
+                                deliver a seamless user experience.</li>
+                            <li class="list-group-item">Demonstrated strong communication, teamwork, and problem-solving skills throughout the project, helping to
+                                ensure the success of the team and the quality of the final product.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col py-4">
+            <!-- Enchanted Forest Card -->
+            <div class="card" style="width: 25rem;">
+                <img src="{{url_for('static', filename='images/homepage_3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Enchanted Forest</h5>
+                <p class="card-text">[ 04/2022 - 06/2022 ] - Unity Project</p>
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#enchantedforestModal">More Info</button>
+                <a href="https://github.com/Apelia-Ion/Proiect-MDS" target="_blank" class="btn btn-outline-secondary">Link</a>
+                </div>
+            </div>
 
-<h3>Lines of Action - PyGame - AI Project</h3>
-<h4>[ 02/2022 - 04/2022 ]</h4>
-<ul>
-    <li>Made a Python game based on a strategy board game named Lines of Action.</li>
-    <li>Implemented Minimax and Alpha-Beta algorithms in order to have the possibility of playing against the
-        computer.</li>
-    <li>The color of one's pieces, the algorithm, the difficulty and the type of game (PvP, PvAI, AIvAI) can all be chosen
-        through the UI.</li>
-</ul> 
+            <div class="modal fade" id="enchantedforestModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enchanted Forest - Unity Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Collaborated with two other colleagues to develop a 2D Platform Game made in Unity and Plastic SCM.</li>
+                            <li class="list-group-item">Designed gameplay moments, including narrative events, enemy encounters, and points of interest within the
+                                game world.</li>
+                            <li class="list-group-item">Implemented player movement, sound management, interactions with environment and various enemy
+                                behaviours using C# scripts.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col py-4">
+            <!-- Street Scene Card -->
+            <div class="card" style="width: 25rem;">
+                <img src="{{url_for('static', filename='images/homepage_3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Street Scene</h5>
+                <p class="card-text">[ 12/2022 - 01/2023 ] - OpenGL Project</p>
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#streetsceneModal">More Info</button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="streetsceneModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Street Scene - OpenGL Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Developed two small projects in OpenGL, showcasing a range of 2D and 3D graphics programming techniques by
+                                depicting street scenes.</li>
+                            <li class="list-group-item">The first project features two animated cars in a simple 2D scene, demonstrating proficiency in basic animation
+                                and movement controls.</li>
+                            <li class="list-group-item">The second project is a more complex 3D scene that includes fog and ambient lighting effects, as well as two cars
+                                and several lamps.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col py-4">
+            <!-- Alien Language Detection Card -->
+            <div class="card" style="width: 25rem;">
+                <img src="{{url_for('static', filename='images/homepage_3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Alien Language Detection</h5>
+                <p class="card-text">[ 04/2022 - 05/2022 ] - Machine Learning Project</p>
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#alienModal">More Info</button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="alienModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Alien Language Detection - Machine Learning Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Developed Natural Language Processing project which classifies alien sentences into different languages.</li>
+                            <li class="list-group-item">Trained a model using Multinomial Naive Bayes from Sklearn with 80% accuracy.</li>
+                            <li class="list-group-item">Used Bag-of-Words to preprocess data for future classification.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="col py-4">
+            <!-- Lines of Action Card -->
+            <div class="card" style="width: 25rem;">
+                <img src="{{url_for('static', filename='images/homepage_3.png')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Lines of Action</h5>
+                <p class="card-text">[ 02/2022 - 04/2022 ] - PyGame - AI Project</p>
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#linesofactionModal">More Info</button>
+                </div>
+            </div>
+
+            <div class="modal fade" id="linesofactionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Lines of Action - PyGame - AI Project</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Made a Python game based on a strategy board game named Lines of Action.</li>
+                            <li class="list-group-item">Implemented Minimax and Alpha-Beta algorithms in order to have the possibility of playing against the
+                                computer.</li>
+                            <li class="list-group-item">The color of one's pieces, the algorithm, the difficulty and the type of game (PvP, PvAI, AIvAI) can all be chosen
+                                through the UI.</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>
 
 {% endblock content %}
