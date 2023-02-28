@@ -8,58 +8,74 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container text-font">
   <div class="row">
     <div class="col-12 d-flex aligns-items-center justify-content-center">
       <img src="{{url_for('static', filename='images/computerscience.png')}}" class="img-responsive scale-down" alt="...">
     </div>
     <div class="col">
-      fgdsfdsW
+      <h2 class ="fw-bolder">Education</h2>
+      <dl>
+          <dt>University of Bucharest - Faculty of Mathematics and Computer Science</dt>
+          <dd>Bachelor's Degree: Computer Science [2020 - Current]</dd>
+          <dt>Bogdan Petriceicu Hasdeu National College</dt>
+          <dd>Mathematics and Computer Science [2016 - 2020]</dd>
+      </dl> 
     </div>
+    <div class="col ms-3">
+      <h2 class ="fw-bolder">College Coursework</h2>
+      <ol>
+          <li>Data Structures and Algorithms</li>
+          <li>Object Oriented Programming</li>
+          <li>Database Management Systems</li>
+          <li>Web Application Development</li>
+          <li>Computer Graphics</li>
+          <li>Artificial Intelligence | Concepts and Applications of Artificial Vision</li>
+          <li>Functional Programming</li>
+          <li>Operating Systems</li>
+      </ol> 
+    </div>
+  </div>
+  <hr>
+</div>
+ 
+<br><br>
+
+<div class="container">
+  <div class="row min-vh-70">
+    <div class="col d-flex align-items-center">
+      <div style="font-size: 1.2em;">
+      <h1>Skills</h1> 
+      <ul style="color:palevioletred">
+          <li><span class="black-color">Programming languages: Python, C++, C#, Java</span></li>
+          <li><span class="black-color">Web frameworks: ASP.NET</span></li>
+              <ul><li><span class="black-color">(beginner) React, Angular</span></li></ul>
+          <li><span class="black-color">Databases: SQL</span></li>
+          <li><span class="black-color">Game engines: Unity</span></li>
+          <li><span class="black-color">Graphics APIs: OpenGL</span></li>
+          <li><span class="black-color">Version control: Git, PlasticSCM</span></li>
+          <li><span class="black-color">Python modules: Scikit-Learn, Pygame, Numpy</span></li>
+      </ul> 
+     </div>
+    </div>
+    <div class="col d-flex aligns-items-center justify-content-center">
+      <img src="{{url_for('static', filename='images/skills.png')}}" class="img-responsive img-full-div" alt="...">
+    </div>
+  </div>
+  <div class="row min-vh-70">
     <div class="col">
-      fgdsfdsW
+      <img src="{{url_for('static', filename='images/certificate.png')}}" class="img-responsive img-full-div" alt="...">
+    </div>
+    <div class="col d-flex align-items-center">
+      <div style="font-size: 1.2em;">
+        <h2>Certificates</h2>
+        <ul style="color:palevioletred">
+            <li><span class="black-color">Cambridge Advanced English Certificate</span></li>
+            <li><span class="black-color">Certificate of completion : The Git & Github Bootcamp</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
-
-
-<h2>Education</h2>
-<dl>
-    <dt>University of Bucharest - Faculty of Mathematics and Computer Science</dt>
-    <dd>Bachelor's Degree: Computer Science [ 2020 - Current ]</dd>
-    <dt>Bogdan Petriceicu Hasdeu National College</dt>
-    <dd>Mathematics and Computer Science[ 2016 - Current ]</dd>
-  </dl> 
-
-
-<h2>College Coursework</h2>
-<ol>
-    <li>Data Structures and Algorithms</li>
-    <li>Object Oriented Programming</li>
-    <li>Database Management Systems</li>
-    <li>Web Application Development</li>
-    <li>Computer Graphics</li>
-    <li>Artificial Intelligence | Concepts and Applications of Artificial Vision</li>
-    <li>Functional Programming</li>
-    <li>Operating Systems</li>
-  </ol> 
-
-<h2>Skills</h2>
-<ul>
-    <li>Programming languages: Python, C++, C#, Java</li>
-    <li>Web frameworks: ASP.NET</li>
-        <ul><li>(beginner) React, Angular</li></ul>
-    <li>Databases: SQL</li>
-    <li>Game engines: Unity</li>
-    <li>Graphics APIs: OpenGL</li>
-    <li>Version control: Git, PlasticSCM</li>
-    <li>Python modules: Scikit-Learn, Pygame, Numpy</li>
-  </ul> 
-
-<h2>Certificates</h2>
-<ul>
-    <li>Cambridge Advanced English Certificate</li>
-    <li>Certificate of completion : The Git & Github Bootcamp</li>
-</ul>
 {% endblock content %}
