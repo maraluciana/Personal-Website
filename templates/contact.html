@@ -16,28 +16,30 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-xl-6 py-4 px-4">
-            <form class="row g-3">
+            <form class="row g-3" action="/contact" method = "post">
                 <div class="col-12 col-xl-6">
                     <label for="inputName" class="form-label">Your name</label>
-                    <input type="text" class="form-control" id="inputName">
+                    <input type="text" class="form-control" name="inputName">
                 </div>
                 <div class="col-12 col-xl-6">
                   <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <input type="email" class="form-control" name="inputEmail" required>
                 </div>
                 <div class="col-12">
                   <label for="inputSubject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="inputSubject">
+                  <input type="text" class="form-control" name="inputSubject" required>
                 </div>
                 <div class="col-12 mb-3">
                     <label for="exampleMesssage" class="form-label">Messsage</label>
-                    <textarea class="form-control" id="exampleMesssage" rows="10"></textarea>
+                    <textarea class="form-control" name="inputMessage" rows="10"></textarea>
                   </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-              </form>
+            </form>
         </div>
+
+        
         <div class="col ms-3 text-font">
             <div class="row ms-3">  
                 <div class="col-12 ms-3">
