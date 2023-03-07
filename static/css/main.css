@@ -1,3 +1,13 @@
+@keyframes onLoadFadeIn {
+  from {opacity: 0;}
+  to {opacity:1;}
+}
+
+.content {
+  animation-name: onLoadFadeIn;
+  animation-duration: 0.7s;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -79,3 +89,5 @@ a:hover {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+
