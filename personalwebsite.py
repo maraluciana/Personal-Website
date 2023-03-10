@@ -1,28 +1,44 @@
 from flask import Flask,render_template,request
 from flask_mail import Mail, Message
+import os
+from email.message import EmailMessage
+import ssl
+import smtplib
+from dotenv import load_dotenv
+load_dotenv()
+
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER']='sandbox.smtp.mailtrap.io'
-app.config['MAIL_PORT'] = 2525
-app.config['MAIL_USERNAME'] = 'e338fbef50b0c3'
-app.config['MAIL_PASSWORD'] = 'fee78b2af26253'
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
-mail = Mail(app)
+
 
 def sendContactForm(result):
-   msg = Message('Contact Form from Marabelu Website' , sender = result['email'], recipients=['test@gmail.com'])
-   msg.body = """
+   email_sender = os.getenv('MAIL_USERNAME_SENDER')
+   email_receiver = os.getenv('MAIL_USERNAME_RECEIVER')
+   password = os.getenv('MAIL_PASSWORD')
+   mail_server = os.getenv('MAIL_SERVER')
+   mail_port = os.getenv('MAIL_PORT')
+
+   message = """
       You just received a Contact Form.
 
       Name : {}
       Email : {}
-      Subject : {}
+   
       Message : {}
-   """.format(result['name'],result['email'],result['subject'],result['message'])
+      """.format(result['name'],result['email'],result['message'])
 
-   mail.send(msg)
+   em = EmailMessage()
+   em['From'] = email_sender
+   em['To'] = email_receiver
+   em['Subject'] = result['subject']
+   em.set_content(message)
+   
+   context = ssl.create_default_context()
+
+   with smtplib.SMTP_SSL(mail_server, mail_port, context=context) as smtp:
+      smtp.login(email_sender, password)
+      smtp.sendmail(email_sender, email_receiver, em.as_string())
 
 
 @app.route('/')
@@ -50,6 +66,7 @@ def contact():
       result['email'] = request.form["inputEmail"].replace(' ', '')
       result['subject'] = request.form["inputSubject"]
       result['message'] = request.form["inputMessage"]
+
 
       sendContactForm(result)
 
