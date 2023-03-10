@@ -13,33 +13,37 @@ app = Flask(__name__)
 
 
 def sendContactForm(result):
-   email_sender = os.getenv('MAIL_USERNAME_SENDER')
-   email_receiver = os.getenv('MAIL_USERNAME_RECEIVER')
-   password = os.getenv('MAIL_PASSWORD')
-   mail_server = os.getenv('MAIL_SERVER')
-   mail_port = os.getenv('MAIL_PORT')
+   try:
+      email_sender = os.getenv('MAIL_USERNAME_SENDER')
+      email_receiver = os.getenv('MAIL_USERNAME_RECEIVER')
+      password = os.getenv('MAIL_PASSWORD')
+      mail_server = os.getenv('MAIL_SERVER')
+      mail_port = os.getenv('MAIL_PORT')
 
-   message = """
-      You just received a Contact Form.
+      message = """
+         You just received a Contact Form.
 
-      Name : {}
-      Email : {}
-   
-      Message : {}
-      """.format(result['name'],result['email'],result['message'])
+         Name : {}
+         Email : {}
+      
+         Message : {}
+         """.format(result['name'],result['email'],result['message'])
 
-   em = EmailMessage()
-   em['From'] = email_sender
-   em['To'] = email_receiver
-   em['Subject'] = result['subject']
-   em.set_content(message)
-   
-   context = ssl.create_default_context()
+      em = EmailMessage()
+      em['From'] = email_sender
+      em['To'] = email_receiver
+      em['Subject'] = result['subject']
+      em.set_content(message)
+      
+      context = ssl.create_default_context()
 
-   with smtplib.SMTP_SSL(mail_server, mail_port, context=context) as smtp:
-      smtp.login(email_sender, password)
-      smtp.sendmail(email_sender, email_receiver, em.as_string())
-
+      with smtplib.SMTP_SSL(mail_server, mail_port, context=context) as smtp:
+         smtp.login(email_sender, password)
+         smtp.sendmail(email_sender, email_receiver, em.as_string())
+   except:
+      return 'failed'
+   else:
+      return 'success'
 
 @app.route('/')
 def home():
@@ -59,6 +63,8 @@ def portfolio():
 
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
+   alert_code = 'waiting'
+
    if request.method == 'POST':
       result = {}
       
@@ -68,11 +74,11 @@ def contact():
       result['message'] = request.form["inputMessage"]
 
 
-      sendContactForm(result)
+      alert_code = sendContactForm(result)
 
-      return render_template("contact.html")
+      return render_template("contact.html", alert = alert_code)
    
-   return render_template("contact.html")
+   return render_template("contact.html", alert = alert_code)
 
 
 

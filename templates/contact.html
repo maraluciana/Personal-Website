@@ -36,6 +36,16 @@
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
+                
+                {% if alert == 'success' %}
+                <div class="alert alert-success" role="alert">
+                    Your message has been successfully sent! I will contact you as soon as possible.
+                </div>
+                {% elif alert == 'failed' %}
+                <div class="alert alert-danger" role="alert">
+                    Something went wrong. Try again.
+                </div>
+                {% endif %}
             </form>
         </div>
 
