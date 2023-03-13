@@ -55,7 +55,7 @@ a:hover {
 }
 
 .title-portfolio{
-  height:20vh;
+  height:30vh;
   background-color: rgb(243, 243, 243);
   margin-bottom: 50px;
 }
@@ -140,7 +140,17 @@ a:hover {
     color: #fff !important;
   }
 
-
+    /* Create a sticky/fixed navbar */
+  #navbar {
+    overflow: hidden;
+    padding: 15px; /* Large padding which will shrink on scroll (using JS) */
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    position: fixed; /* Sticky/fixed navbar */
+    width: 100%;
+    top: 0; /* At the top */
+    z-index: 99;
+    background-color: white;
+  }
 }
 
 
