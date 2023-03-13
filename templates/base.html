@@ -14,9 +14,11 @@
         {% endif %}
     </head>
     <body>
-        {% include "menu.html" %}
+        <div class="box overlay">
+            {% include "menu.html" %}
+        </div>
 
-        <div class="content">
+        <div class="content box">
             {% block content %} {% endblock %}
         </div>
 
