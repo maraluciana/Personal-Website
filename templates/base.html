@@ -14,9 +14,13 @@
         {% endif %}
     </head>
     <body>
-        <div class="box overlay">
+        {% if menu == 'menu' %}
             {% include "menu.html" %}
-        </div>
+        {% elif menu == 'homepage_menu' %}
+            <div class="box overlay">
+                {% include "homepage_menu.html" %}
+            </div>
+        {% endif %}
 
         <div class="content box">
             {% block content %} {% endblock %}

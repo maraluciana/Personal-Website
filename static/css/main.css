@@ -103,14 +103,6 @@ a:hover {
   }
 }
 
-.menu-border-bottom {
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-
-.menu-border-right {
-  border-right: 1px solid rgba(255,255,255,0.4);
-}
-
 
 
 @media screen and (min-width: 960px) {
@@ -130,8 +122,20 @@ a:hover {
     z-index: 2;
   }
 
-  .navbar .navbar-brand,
-  .navbar-nav .nav-link.active {
+  .menu-border-bottom {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+  }
+  
+  .menu-border-right {
+    border-right: 1px solid rgba(255,255,255,0.4);
+  }
+
+  .menu-border-right-gray{
+    border-right: 1px solid rgb(224, 224, 224);
+  }
+
+
+  .white-text {
     color: #fff !important;
   }
 
