@@ -55,9 +55,10 @@ a:hover {
 }
 
 .title-portfolio{
-  height:30vh;
+  height:20vh;
   background-color: rgb(243, 243, 243);
   margin-bottom: 50px;
+  padding-top: 0px;
 }
 
 .card-img-top {
@@ -150,6 +151,11 @@ a:hover {
     top: 0; /* At the top */
     z-index: 99;
     background-color: white;
+  }
+
+  .title-portfolio{
+    padding-top: 100px;
+    height:30vh;
   }
 }
 
