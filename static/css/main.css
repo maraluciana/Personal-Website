@@ -119,12 +119,12 @@ a:hover {
 
 @media screen and (min-width: 961px) {
   .border-parent{
-    border-bottom:1px solid rgba(224, 224, 224,0.4);
+    border-bottom:1px solid rgba(224, 224, 224,0.3);
   }
 
   .border-child{
     overflow: hidden;
-    border-right: 1px solid rgba(224, 224, 224,0.4);
+    border-right: 1px solid rgba(224, 224, 224,0.3);
     height: 100%;
   }
 
@@ -144,6 +144,8 @@ a:hover {
     width: 100%;
     top: 0; /* At the top */
     z-index: 99;
+    padding-bottom: 0px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
   }
 
   #navbarimage{
@@ -160,7 +162,7 @@ a:hover {
 
   .title-portfolio{
     padding-top: 100px;
-    height:30vh;
+    height:70vh;
   }
 }
 

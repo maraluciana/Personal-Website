@@ -9,7 +9,7 @@ function scrollFunction() {
   
 
   if (window.innerWidth > 960){
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
       navbar.style.backgroundColor = "white";
 
       for (let i = 0; i < collection.length; i++) {
