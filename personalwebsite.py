@@ -1,5 +1,4 @@
 from flask import Flask,render_template,request
-from flask_mail import Mail, Message
 import os
 from email.message import EmailMessage
 import ssl
