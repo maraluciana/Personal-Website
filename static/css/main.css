@@ -7,7 +7,6 @@
   animation-name: onLoadFadeIn;
   animation-duration: 0.7s;
   z-index: 1;
-  position: relative;
 }
 
 .imgbox {
