@@ -1,5 +1,4 @@
 from flask import Flask,render_template,request
-from flask_mail import Mail, Message
 import os
 from email.message import EmailMessage
 import ssl
@@ -9,8 +8,6 @@ load_dotenv()
 
 
 app = Flask(__name__)
-
-
 
 def sendContactForm(result):
    try:
@@ -45,21 +42,26 @@ def sendContactForm(result):
    else:
       return 'success'
 
+
+
+menu = 'menu'
+
 @app.route('/')
 def home():
-   return render_template("homepage.html")
+   menu = 'homepage_menu'
+   return render_template("homepage.html", menu = menu)
 
 @app.route('/about')
 def about():
-   return render_template("about.html")
+   return render_template("about.html", menu = menu)
 
 @app.route('/resume')
 def resume():
-   return render_template("resume.html")
+   return render_template("resume.html", menu = menu)
 
 @app.route('/portfolio')
 def portfolio():
-   return render_template("portfolio.html")
+   return render_template("portfolio.html", menu = menu)
 
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
@@ -76,9 +78,9 @@ def contact():
 
       alert_code = sendContactForm(result)
 
-      return render_template("contact.html", alert = alert_code)
+      return render_template("contact.html", alert = alert_code, menu = menu)
    
-   return render_template("contact.html", alert = alert_code)
+   return render_template("contact.html", alert = alert_code, menu = menu)
 
 
 
