@@ -57,7 +57,8 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  opacity: 80%;
+  color:#f7f7f7;
+  opacity: 90%;
 }
 
 .card-img-top {
@@ -109,6 +110,7 @@ a:hover {
   padding-top: 4px;
 }
 
+
 @media screen and (max-width: 960px) {
   .white-theme{
     background-color: white;
@@ -127,7 +129,11 @@ a:hover {
   }
 
   .white-text {
-    color: #fff !important;
+    color: #f7f7f7 !important;
+    font-size: 13px !important;
+    letter-spacing: 1px;
+    margin-left: 15px;
+    font-family: "Poppins", sans-serif;
   }
 
     /* Create a sticky/fixed navbar */
@@ -141,6 +147,13 @@ a:hover {
   }
 
   #navbarimage{
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    z-index: 99;
+  }
+
+  #navbartitle{
+    color: #f7f7f7 !important;
+    font-size: 25px;
     transition: 0.4s; /* Adds a transition effect when the padding is decreased */
     z-index: 99;
   }
