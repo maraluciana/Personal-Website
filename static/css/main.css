@@ -101,6 +101,12 @@ a:hover {
   }
 }
 
+.rounded{
+  padding-bottom: 4px; 
+  padding-right: 4px;
+  padding-top: 4px;
+}
+
 @media screen and (max-width: 960px) {
   .white-theme{
     background-color: white;
