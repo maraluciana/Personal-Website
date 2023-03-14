@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="container-fluid title-portfolio d-flex flex-column justify-content-center text-font">
+<div class="container-fluid title-portfolio d-flex flex-column justify-content-center text-font" style="background-image: url('../static/images/resume_image.png');">
   <div class = "row">
       <div class = "col-2"></div>
       <h1 class= "col fw-bolder"> Resume</h1>
@@ -9,6 +9,19 @@
 </div>
 
 <div class="container text-font">
+  <div class="row">
+    <div class="col">
+      <div class = "display-3 fw-bolder typing">
+        <span class = "display-3 fw-bolder">About me </span>
+        <i class="bi bi-cup-hot-fill"></i>
+      </div>
+      <br>
+      <p class = " fs-4 lh-base text-muted"> As a student with no formal work experience, I am highly motivated and eager to learn new skills and take on new
+          challenges. I am passionate about technology and I am constantly seeking to expand my knowledge and abilities. I
+          am a quick learner with strong problem-solving skills and an ability to work well in teams.
+      </p>
+    </div>
+  </div>
   <div class="row">
     <div class="col-12 d-flex aligns-items-center justify-content-center">
       <img src="{{url_for('static', filename='images/computerscience.png')}}" class="img-responsive scale-down" alt="...">

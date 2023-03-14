@@ -15,11 +15,9 @@
         {% endif %}
     </head>
     <body>
-        {% if menu == 'menu' %}
-            {% include "menu.html" %}
-        {% elif menu == 'homepage_menu' %}
-            {% include "homepage_menu.html" %}
-        {% endif %}
+
+        {% include "homepage_menu.html" %}
+
 
         <div class="content">
             {% block content %} {% endblock %}

@@ -52,9 +52,12 @@ a:hover {
 
 .title-portfolio{
   height:20vh;
-  background-color: rgb(243, 243, 243);
   margin-bottom: 50px;
   padding-top: 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 80%;
 }
 
 .card-img-top {
@@ -128,15 +131,18 @@ a:hover {
   }
 
     /* Create a sticky/fixed navbar */
-  #navbar {
+  #navbar{
     overflow: hidden;
-    padding: 15px; /* Large padding which will shrink on scroll (using JS) */
     transition: 0.4s; /* Adds a transition effect when the padding is decreased */
     position: fixed; /* Sticky/fixed navbar */
     width: 100%;
     top: 0; /* At the top */
     z-index: 99;
-    background-color: white;
+  }
+
+  #navbarimage{
+    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+    z-index: 99;
   }
 
   .title-portfolio{

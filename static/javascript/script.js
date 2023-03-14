@@ -1,10 +1,42 @@
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "0px";
-  } else {
-    document.getElementById("navbar").style.padding = "15px";
+  var navbar = document.getElementById("navbar");
+  var navbarImage = document.getElementById("navbarimage");
+  var collection = document.getElementsByClassName("white-text");
+
+  if (window.innerWidth > 960){
+    if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+      navbar.style.backgroundColor = "white";
+
+      for (let i = 0; i < collection.length; i++) {
+        collection[i].setAttribute('style', 'color:black !important');
+      }
+
+      navbarImage.height = 60;
+      navbarImage.width = 70;
+
+    }
+    else{
+      navbar.style.backgroundColor = "transparent";
+
+      for (let i = 0; i < collection.length; i++) {
+        collection[i].setAttribute('style', 'color:white !important');
+      }
+
+      navbarImage.height = 100;
+      navbarImage.width = 120;
+    }
   }
+  else{
+    navbar.style.backgroundColor = "white";
+
+    for (let i = 0; i < collection.length; i++) {
+      collection[i].setAttribute('style', 'color:black !important');
+    }
+
+    navbarImage.height = 100;
+    navbarImage.width = 120;
+  }
+  
 }
