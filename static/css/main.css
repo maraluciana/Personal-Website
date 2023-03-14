@@ -108,22 +108,6 @@ a:hover {
 }
 
 @media screen and (min-width: 961px) {
-
-  body{
-    position: relative;
-  }
-
-  .box{
-    width: 100%;
-    height:90px;
-    position: absolute;
-
-  }
-
-  .overlay{
-    z-index: 2;
-  }
-
   .border-parent{
     border-bottom:1px solid rgba(224, 224, 224,0.4);
   }
