@@ -3,9 +3,6 @@
   to {opacity:1;}
 }
 
-
-
-
 .content {
   animation-name: onLoadFadeIn;
   animation-duration: 0.7s;
