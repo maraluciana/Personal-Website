@@ -44,24 +44,21 @@ def sendContactForm(result):
 
 
 
-menu = 'menu'
-
 @app.route('/')
 def home():
-   menu = 'homepage_menu'
-   return render_template("homepage.html", menu = menu)
+   return render_template("homepage.html")
 
 @app.route('/about')
 def about():
-   return render_template("about.html", menu = menu)
+   return render_template("about.html")
 
 @app.route('/resume')
 def resume():
-   return render_template("resume.html", menu = menu)
+   return render_template("resume.html")
 
 @app.route('/portfolio')
 def portfolio():
-   return render_template("portfolio.html", menu = menu)
+   return render_template("portfolio.html")
 
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
@@ -78,9 +75,9 @@ def contact():
 
       alert_code = sendContactForm(result)
 
-      return render_template("contact.html", alert = alert_code, menu = menu)
+      return render_template("contact.html", alert = alert_code)
    
-   return render_template("contact.html", alert = alert_code, menu = menu)
+   return render_template("contact.html", alert = alert_code)
 
 
 
