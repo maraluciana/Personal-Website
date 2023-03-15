@@ -43,6 +43,9 @@ def sendContactForm(result):
       return 'success'
 
 
+@app.errorhandler(404)
+def not_found(e):
+   return render_template("404.html")
 
 @app.route('/')
 def home():

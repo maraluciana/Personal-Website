@@ -32,7 +32,7 @@ a:link {
   text-decoration: none;
 }
 
-a:hover {
+.hp-link:hover {
   text-decoration: none;
   color: hotpink;
 }
@@ -50,15 +50,14 @@ a:hover {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.title-portfolio{
-  height:20vh;
+.page-title{
+  height:70vh;
   margin-bottom: 50px;
-  padding-top: 0px;
+  padding-top: 100px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   color:#f7f7f7;
-  opacity: 90%;
 }
 
 .card-img-top {
@@ -110,11 +109,43 @@ a:hover {
   padding-top: 4px;
 }
 
-.page-title{
+
+.title-404{
+  height:39vh;
+  margin-bottom: 50px;
   padding-top: 100px;
-  height:70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color:#f7f7f7;
 }
 
+.parent-404{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 550;
+}
+
+.text-404{
+  opacity: 0.3;
+  font-size:30vh;
+}
+
+.text-404-right{
+  font-size: 3em;
+  color: #444;
+}
+
+
+.list dt a {
+  font-weight: 400;
+  color:#444;
+}
+
+.list dt a:hover {
+  color:#1abc9c;
+}
 
 @media screen and (max-width: 960px) {
   .white-theme{

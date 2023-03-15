@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid d-flex flex-column justify-content-center text-font title-404" style="background-image: url('../static/images/sad.png');">
+    <div class = "row">
+        <div class = "col-2"></div>
+        <h1 class= "col fw-bolder "> PAGE NOT FOUND</h1>
+    </div>>
+  </div>
+
+  <div class="container">
+    <div class="row parent-404">
+        <div class="col-lg-6 col-sm-12 text-404">
+            404
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <div class=" text-404-right">
+                Ooops! The page you were looking couldn't be found :&#40;
+            </div>
+            <div style="opacity: 0.3; font-size: 2em;">
+                <div class="text-font">
+                    Try one of these pages instead!
+                </div>
+
+                <dl class="list">
+                    <dt>
+                        <a href="/">Homepage</a>
+                    </dt>
+                    <dt>
+                        <a href="resume">Resume</a>
+                    </dt>
+                    <dt>
+                        <a href="portfolio">Portfolio</a>
+                    </dt>
+                    <dt>
+                        <a href="contact">Contact</a>
+                    </dt>
+                </dl> 
+            </div>
+        </div>
+    </div>
+  </div>
+
+{% endblock content %}
