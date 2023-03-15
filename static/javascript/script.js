@@ -8,14 +8,13 @@ function scrollFunction() {
   var collection = document.getElementsByClassName("white-text");
 
   for (let i = 0; i < collection.length; i++) {
-    // Store the original color of the element
-    var originalColor = window.getComputedStyle(collection[i]).getPropertyValue("color");
-    collection[i].setAttribute("data-original-color", originalColor);
-  
     collection[i].addEventListener("mouseover", function(){
-      this.style.color = "green";
+      this.style.color = "#1abc9c";
     });
 
+    collection[i].addEventListener("mouseout", function(){
+      this.setAttribute('style', 'color:#444 !important');
+    });
   }
 
   
@@ -26,6 +25,14 @@ function scrollFunction() {
 
       for (let i = 0; i < collection.length; i++) {
         collection[i].setAttribute('style', 'color:#444 !important');
+
+        collection[i].addEventListener("mouseover", function(){
+          this.style.color = "#1abc9c";
+        });
+    
+        collection[i].addEventListener("mouseout", function(){
+          this.setAttribute('style', 'color:#444 !important');
+        });
       }
 
       navbarTitle.setAttribute('style', 'color:#444 !important');
@@ -40,6 +47,14 @@ function scrollFunction() {
 
       for (let i = 0; i < collection.length; i++) {
         collection[i].setAttribute('style', 'color:#f7f7f7 !important');
+
+        collection[i].addEventListener("mouseover", function(){
+          this.style.color = "#1abc9c";
+        });
+    
+        collection[i].addEventListener("mouseout", function(){
+          this.setAttribute('style', 'color:#f7f7f7 !important');
+        });
       }
 
       navbarTitle.setAttribute('style', 'color:#f7f7f7 !important');
@@ -54,6 +69,15 @@ function scrollFunction() {
 
     for (let i = 0; i < collection.length; i++) {
       collection[i].setAttribute('style', 'color:#444 !important');
+
+
+      collection[i].addEventListener("mouseover", function(){
+        this.style.color = "#1abc9c";
+      });
+  
+      collection[i].addEventListener("mouseout", function(){
+        this.setAttribute('style', 'color:#444 !important');
+      });
     }
 
     navbarTitle.setAttribute('style', 'color:#444 !important');
