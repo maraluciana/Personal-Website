@@ -30,6 +30,7 @@ def sendContactForm(result):
       em['From'] = email_sender
       em['To'] = email_receiver
       em['Subject'] = result['subject']
+      em['Reply-To'] = result['email']
       em.set_content(message)
       
       context = ssl.create_default_context()
