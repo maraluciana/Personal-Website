@@ -136,6 +136,10 @@ a:hover {
     font-family: "Poppins", sans-serif;
   }
 
+  .white-text:hover{
+    color:green !important;
+  } 
+
     /* Create a sticky/fixed navbar */
   #navbar{
     overflow: hidden;
