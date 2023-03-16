@@ -1,205 +1,167 @@
 @keyframes onLoadFadeIn {
-  from {opacity: 0;}
-  to {opacity:1;}
-}
-
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .content {
   animation-name: onLoadFadeIn;
   animation-duration: 0.7s;
-  z-index: 1;
-}
+  z-index: 1; }
 
 .imgbox {
   display: grid;
-  height: 100%;
-}
+  height: 100%; }
+
 .center-fit {
   max-width: 100%;
   max-height: 100vh;
-  margin: auto;
-}
+  margin: auto; }
 
 .text-over-image {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-shadow: 2px 2px 4px rgb(48, 46, 51);
-  color: white;
-}
+  text-shadow: 2px 2px 4px #302e33;
+  color: #f7f7f7; }
 
 a:link {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .hp-link:hover {
   text-decoration: none;
-  color: hotpink;
-}
+  color: hotpink; }
 
-.full-size{
-  height:100vh;
-  position:absolute;
-}
+.full-size {
+  height: 100vh;
+  position: absolute; }
 
 .scale-down {
-  width: 70%;
-}
+  width: 70%; }
+
+.black-color {
+  color: black; }
 
 .text-font {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
 
-.page-title{
-  height:70vh;
+.page-title {
+  height: 70vh;
   margin-bottom: 50px;
   padding-top: 100px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  color:#f7f7f7;
-}
+  color: #f7f7f7; }
 
 .card-img-top {
   width: 100%;
   height: 22em;
-  object-fit: cover;
-}
+  object-fit: cover; }
 
 .img-full-div {
-  vertical-align: middle;
-}
-
-.black-color {
-  color: black;
-}
+  vertical-align: middle; }
 
 .vertical-center {
   margin: 0;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
+  transform: translateY(-50%); }
 
 .typing {
   width: 11ch;
-  animation: typing 1s steps(11), blink .5s step-end infinite alternate;
+  animation: typing 1s steps(11), blink 0.5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
-}
+  border-right: 3px solid; }
 
 @keyframes typing {
   from {
-    width: 0
-  }
-}
-    
+    width: 0; } }
 @keyframes blink {
   80% {
-    border-color: transparent
-  }
-}
-
-.rounded{
-  padding-bottom: 4px; 
+    border-color: transparent; } }
+.rounded {
+  padding-bottom: 4px;
   padding-right: 4px;
-  padding-top: 4px;
-}
+  padding-top: 4px; }
 
-
-.title-404{
-  height:39vh;
+.title-404 {
+  height: 39vh;
   margin-bottom: 50px;
   padding-top: 100px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  color:#f7f7f7;
-}
+  color: #f7f7f7; }
 
-.parent-404{
+.parent-404 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 550;
-}
+  font-weight: 550; }
 
-.text-404{
+.text-404 {
   opacity: 0.3;
-  font-size:30vh;
-}
+  font-size: 30vh; }
 
-.text-404-right{
+.text-404-right {
   font-size: 3em;
-  color: #444;
-}
-
+  color: #444; }
 
 .list dt a {
   font-weight: 400;
-  color:#444;
-}
-
+  color: #444; }
 .list dt a:hover {
-  color:#1abc9c;
-}
+  color: #1abc9c; }
 
 @media screen and (max-width: 960px) {
-  .white-theme{
-    background-color: white;
-  }
-}
-
+  .white-theme {
+    background-color: white; } }
 @media screen and (min-width: 961px) {
-  .border-parent{
-    border-bottom:1px solid rgba(224, 224, 224,0.3);
-  }
+  .border-parent {
+    border-bottom: 1px solid rgba(224, 224, 224, 0.3); }
 
-  .border-child{
+  .border-child {
     overflow: hidden;
-    border-right: 1px solid rgba(224, 224, 224,0.3);
-    height: 100%;
-  }
+    border-right: 1px solid rgba(224, 224, 224, 0.3);
+    height: 100%; }
 
   .white-text {
     color: #f7f7f7 !important;
     font-size: 13px !important;
     letter-spacing: 1px;
     margin-left: 15px;
-    font-family: "Poppins", sans-serif;
-  }
+    font-family: "Poppins", sans-serif; }
 
-  .white-text:hover{
-    color:#1abc9c !important;
-  } 
+  .white-text:hover {
+    color: #1abc9c !important; }
 
-    /* Create a sticky/fixed navbar */
-  #navbar{
+  /* Create a sticky/fixed navbar */
+  #navbar {
     overflow: hidden;
-    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-    position: fixed; /* Sticky/fixed navbar */
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */
+    position: fixed;
+    /* Sticky/fixed navbar */
     width: 100%;
-    top: 0; /* At the top */
+    top: 0;
+    /* At the top */
     z-index: 99;
     padding-bottom: 0px;
-    box-shadow: 0 0 10px rgba(0,0,0,.1);
-  }
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
 
-  #navbarimage{
-    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-    z-index: 99;
-  }
+  #navbarimage {
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */
+    z-index: 99; }
 
-  #navbartitle{
+  #navbartitle {
     color: #f7f7f7 !important;
     font-size: 25px;
-    transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-    z-index: 99;
-  }
+    transition: 0.4s;
+    /* Adds a transition effect when the padding is decreased */
+    z-index: 99; } }
 
-}
-
-
+/*# sourceMappingURL=main.css.map */
