@@ -12,9 +12,33 @@ pip install Flask
 pip install python-dotenv
 ```
 
+#### Ruby 
+```
+sudo apt-get install ruby-full
+```
+
+#### SASS
+```
+sudo gem install sass
+```
+
 ### - Copy the content from .env.example to .env and configure the variables
 
+### - Compile the CSS file 
+
+#### Go to the css folder
+
+```
+cd static/css
+```
+
+#### Compile the SASS file to CSS
+```
+sass main.scss main.css
+```
+
 ### - Run personalwebsite.py
+
 > If it worked, it should look like this (in visual studio code)
 
 ![image](https://user-images.githubusercontent.com/71257603/223697338-1e005930-d089-4bb6-9838-9193517312a9.png)
