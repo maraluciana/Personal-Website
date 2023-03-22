@@ -38,8 +38,8 @@ def sendContactForm(result):
       with smtplib.SMTP_SSL(mail_server, mail_port, context=context) as smtp:
          smtp.login(email_sender, password)
          smtp.sendmail(email_sender, email_receiver, em.as_string())
-   except:
-      return 'failed'
+   except Exception as e:
+      return e
    else:
       return 'success'
 
@@ -67,6 +67,7 @@ def portfolio():
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
    alert_code = 'waiting'
+   logging = os.getenv('LOGGING')
 
    if request.method == 'POST':
       result = {}
@@ -79,9 +80,9 @@ def contact():
 
       alert_code = sendContactForm(result)
 
-      return render_template("contact.html", alert = alert_code)
+      return render_template("contact.html", alert = alert_code, logging = logging)
    
-   return render_template("contact.html", alert = alert_code)
+   return render_template("contact.html", alert = alert_code, logging = logging)
 
 
 
