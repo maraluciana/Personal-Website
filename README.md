@@ -23,6 +23,8 @@ sudo gem install sass
 ```
 
 ### - Copy the content from .env.example to .env and configure the variables
+LOGGING = 'true' for error message in contact form (debugging purpose)
+LOGGING = 'false' for basic message
 
 ### - Compile the CSS file 
 
