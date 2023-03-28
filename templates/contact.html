@@ -15,10 +15,22 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12 col-xl-6 py-4 px-4">
-            <div class="text-muted">
-                After submitting the form, scroll down for status message
+        <div class="col-12 col-xl-6 ">
+            {% if alert == 'success' %}
+            <div class="alert alert-success" role="alert">
+                Your message has been successfully sent! I will contact you as soon as possible.
             </div>
+            {% elif alert != 'waiting' %}
+                {% if logging == 'false' %}
+                <div class="alert alert-danger" role="alert">
+                    Something went wrong. Try again.
+                </div>
+                {% elif logging == 'true' %}
+                <div class="alert alert-danger" role="alert">
+                    {{alert}}
+                </div>
+                {% endif %}
+            {% endif %}
             <br>
             <form class="row g-3" action="/contact" method = "post">
                 <div class="col-12 col-xl-6">
@@ -40,22 +52,6 @@
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-                
-                {% if alert == 'success' %}
-                <div class="alert alert-success" role="alert">
-                    Your message has been successfully sent! I will contact you as soon as possible.
-                </div>
-                {% elif alert != 'waiting' %}
-                    {% if logging == 'false' %}
-                    <div class="alert alert-danger" role="alert">
-                        Something went wrong. Try again.
-                    </div>
-                    {% elif logging == 'true' %}
-                    <div class="alert alert-danger" role="alert">
-                        {{alert}}
-                    </div>
-                    {% endif %}
-                {% endif %}
             </form>
         </div>
 
