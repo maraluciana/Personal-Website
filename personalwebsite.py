@@ -1,15 +1,33 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,flash,redirect,url_for
 import os
 from email.message import EmailMessage
 import ssl
 import smtplib
 from dotenv import load_dotenv
+from flask_wtf import FlaskForm, RecaptchaField
+from wtforms import StringField, TextAreaField
+from wtforms.validators import InputRequired, Email, Length, Optional
+from flask_recaptcha import ReCaptcha
+
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
 
 
 app = Flask(__name__)
+
+app.config['RECAPTCHA_PUBLIC_KEY'] = os.getenv('RECAPTCHA_PUBLIC_KEY')
+app.config['RECAPTCHA_PRIVATE_KEY'] = os.getenv('RECAPTCHA_PRIVATE_KEY')
+app.secret_key = os.environ.get('FLASK_SECRET_KEY')
+
+
+class ContactForm(FlaskForm):
+   inputName = StringField('name', validators=[InputRequired(), Length(max=50)])
+   inputSubject = StringField('subject', validators=[InputRequired(), Length(max=50)])
+   inputEmail = StringField('email', validators=[InputRequired(), Length(max=100)])
+   inputMessage = TextAreaField('message', validators = [InputRequired(), Length(max=5000)])
+   recaptcha = RecaptchaField()
+
 
 def sendContactForm(result):
    try:
@@ -109,25 +127,32 @@ def portfolio():
 
 @app.route('/contact', methods=["GET", "POST"])
 def contact():
-   alert_code = 'waiting'
+   form = ContactForm()
 
+   alert_code = 'waiting'
    logging = os.getenv('LOGGING')
 
    if request.method == 'POST':
-      result = {}
-      
-      result['name'] = request.form["inputName"]
-      result['email'] = request.form["inputEmail"].replace(' ', '')
-      result['subject'] = request.form["inputSubject"]
-      result['message'] = request.form["inputMessage"]
+      if form.validate_on_submit():
+         recaptcha = ReCaptcha()
+         if not recaptcha.verify():
+            flash('Invalid reCAPTCHA. Please try again.')
+            return redirect(url_for('contact'))
+         
+         result = {}
+         
+         result['name'] = request.form["inputName"]
+         result['email'] = request.form["inputEmail"].replace(' ', '')
+         result['subject'] = request.form["inputSubject"]
+         result['message'] = request.form["inputMessage"]
 
 
-      alert_code = sendContactForm(result)
-      automatedMessage(result)
+         alert_code = sendContactForm(result)
+         automatedMessage(result)
 
-      return render_template("contact.html", alert = alert_code, logging = logging)
+         return render_template("contact.html", alert = alert_code, logging = logging, form=form)
    
-   return render_template("contact.html", alert = alert_code, logging = logging)
+   return render_template("contact.html", alert = alert_code, logging = logging, form=form)
 
 
 
