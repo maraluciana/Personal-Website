@@ -74,7 +74,6 @@ def automatedMessage(result):
 
       message = """
          Thank you for your message. This is an automated response to let you know that I have received your message via marabelu.ro and will respond as soon as possible.
-         If your matter is urgent, please don't hesitate to call me at 0722618765. Otherwise, I will get back to you as soon as I can.
 
          You can find below a summary of the information you provided in the contact form:
          
